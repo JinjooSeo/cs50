@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifndef min
-#define min(a,b)  (((a) < (b)) ? (a) : (b))
-#endif
-
 int static compare (const void* first, const void* second);
 int minimumCost(int price[], int n);
 
@@ -49,7 +45,7 @@ int minimumCost(int price[], int n){
 
         return totalCost;
       }
-      
+
       if(price[1]*2 <= price[0] + price[i-1]){
         printf("%i and %i\n",price[0],price[1]); // move to right
         totalCost += price[1];
