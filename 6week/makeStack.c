@@ -33,7 +33,7 @@ void push(Stack* stack, int item) {
 int pop(Stack* stack) {
     if (!isEmpty(stack)) {
 		int tmp = stack->array[stack->top];
-		stack->top = --stack->top; 
+		--stack->top; 
 		return tmp;
     }
     return -9999;
